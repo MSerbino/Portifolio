@@ -1,0 +1,284 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #6B705C;
+    font-family:  Lora, serif;;
+}
+
+.navigation {
+    background-color: #A5A58D;
+    color: white;
+    height: 56px;
+
+    animation-name: navegacao;
+    animation-duration: 2s;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: #99582A;
+}
+
+.navigation ul {
+    list-style: none;
+    margin-top: 0;
+    padding: 0;
+    height: 56px;
+    text-align: right;
+}
+
+.navigation li {
+ display: inline-block;
+ line-height: 56px;
+ padding-left: 30px;
+ padding-right: 30px;
+ font-weight: 100;
+ font-size: 18px;
+}
+
+.navigation li.threeline-icon {
+    display: none;
+}
+
+
+.capa {
+    color: #FFE8D6;
+}
+
+.capa span {
+    color: #CB997E;
+    display: block;
+}
+
+.capa div {
+    display: inline-block;
+    height: 650px;
+}
+
+.profile-pic {
+    width: 39%;
+    text-align: center;
+
+    animation-name: profile-capa;
+    animation-duration: 2s;
+}
+
+.profile-pic img {
+    border-radius: 152px;
+    width: 320px;
+    margin-top: 100px;
+}
+
+.profile-title {
+    vertical-align: top;
+    width: 60%;
+
+    animation-name: titulo-capa;
+    animation-duration: 2s;
+}
+
+.profile-title h1 {
+    margin-top: 200px;
+    font-size: 58px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 54px;
+}
+
+.profile-title h2 {
+    margin-top: -26px;
+    font-weight: 100;
+    font-size: 16px;
+}
+.main {
+    padding: 40px 180px 80px 100px;
+
+    /*padding-top: 40px; --- pode ser colocado todos os valores na mesma linha  ------
+    padding-right: 180px;
+    padding-bottom: 80px;
+    padding-left: 100px;*/
+    
+}
+
+.cv-pic {
+    float: left;
+    width: 250px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.main h1 {
+    color: #FFE8D6;
+    font-size: 32px;
+    font-weight: normal;
+
+}
+
+.main h2 {
+    color: #FFE8D6;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+
+.main h3 {
+    color: #001D3D;
+    font-size: 14px;
+}
+
+.main p {
+    color: #FFE8D6;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 24px;
+    text-align: justify;
+}
+
+.caminho {
+    list-style: none;
+    color: grey;
+    padding-left: 0;
+}
+
+.caminho li {
+    display: inline-block;
+}
+
+.caminho a {
+    color: gray;
+}
+
+.cn-pic {
+    float: left;
+    width: 50px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.port-pic-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.port-pic {
+    position: relative;
+    width: 500px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.port-pic img {
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.port-pic:hover img {
+    opacity: 0.7;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0A0908;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.port-pic:hover .img-overlay {
+    opacity: 1;
+}
+
+  
+
+@keyframes profile-capa {
+    0% {transform: translate(0px, 20px)}
+    100% {transform: translate(0px, 0px)}
+}
+
+@keyframes titulo-capa {
+    0% {transform: translate(0px, -20px)}
+    100% {transform: translate(0px, 0px)}
+}
+
+@keyframes navegacao {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@media (max-width: 1000px) {
+
+    .navigation li {
+        display: none;
+    }
+
+    .navigation li.threeline-icon {
+        display: inline-block;
+    }
+
+    .capa div {
+        display: block;
+        height: auto;
+    }
+
+    .profile-pic {
+        width: 100%;
+    }
+
+    .profile-pic img {
+        max-width: 75%;
+        margin-top: 0;        
+    }
+
+    .profile-title {
+        
+        text-align: center;
+        width: 100%;
+    }
+
+    .profile-title h1 {
+        margin-top: 30px;
+        font-size: 36px;
+        margin-left:  20px;
+        margin-right: 25px;
+    }
+
+    .profile-pic h2 {
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+.menuJs {
+    height: auto;
+}
+
+.menuJs ul {
+    height: auto;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.menuJs li {
+    display: block;
+    border-bottom: solid grey 1px;
+    width: 100%;
+    padding: 0;
+}
